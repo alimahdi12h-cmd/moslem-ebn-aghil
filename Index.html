@@ -3,35 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>هیئت نوجوانان محبان الحسین (ع)</title>
+<title>مسجد مسلم ابن عقیل</title>
 
 <style>
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Tahoma, Arial, sans-serif;
-    background: #090909;
-    color: white;
+    background: #080808;
+    color: #fff;
     line-height: 2;
 }
 
 header {
     text-align: center;
-    padding: 60px 15px;
-    background: linear-gradient(145deg, #350008, #080808 75%);
+    padding: 55px 15px;
+    background: linear-gradient(145deg, #48000b, #090909 80%);
     border-bottom: 2px solid #d71929;
 }
 
-h1 {
-    color: #ff303f;
-    font-size: 30px;
+header .small {
+    color: #e4bfc2;
 }
 
-header p {
-    color: #e0caca;
+h1 {
+    color: #ff3446;
+    font-size: 30px;
+    line-height: 1.8;
+}
+
+h2 {
+    color: #ff394b;
 }
 
 .container {
@@ -40,67 +49,85 @@ header p {
     margin: auto;
 }
 
-.card {
-    background: #171313;
-    border: 1px solid #4a2025;
-    border-radius: 15px;
-    padding: 22px;
-    margin: 20px 0;
-    text-align: center;
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 8px;
+    background: #121010;
+    border-bottom: 1px solid #35171b;
 }
 
-h2 {
-    color: #ff3948;
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 12px;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    background: #851020;
+}
+
+.card {
+    background: linear-gradient(145deg, #191313, #100e0e);
+    border: 1px solid #492027;
+    border-radius: 16px;
+    padding: 22px;
+    margin: 22px 0;
+    text-align: center;
+    box-shadow: 0 5px 20px #000;
 }
 
 .icon {
-    font-size: 35px;
+    font-size: 38px;
 }
 
 .button {
     display: inline-block;
     background: #b90f20;
     color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 9px 19px;
+    border-radius: 9px;
     text-decoration: none;
-    margin-top: 10px;
+    margin: 6px;
 }
 
-footer {
-    background: #120809;
-    border-top: 1px solid #5a171e;
-    text-align: center;
-    padding: 25px;
-    color: #d8b9bb;
+.button:hover {
+    background: #e01e32;
 }
 
-input, textarea {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 12px;
-    border: 1px solid #5a252b;
-    border-radius: 8px;
-    background: #080808;
-    color: white;
-    font-family: Tahoma, sans-serif;
-}
-
-button {
-    background: #bd1525;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: Tahoma, sans-serif;
+.info {
+    background: #0d0d0d;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #302024;
 }
 
 .notice {
-    font-size: 12px;
-    color: #c9b6b8;
+    border-right: 4px solid #d71929;
+    padding: 10px 14px;
+    background: #110d0e;
+    border-radius: 8px;
+    margin: 12px 0;
+    text-align: right;
 }
+
+footer {
+    margin-top: 35px;
+    background: #130809;
+    border-top: 1px solid #5a171e;
+    text-align: center;
+    padding: 25px 12px;
+    color: #d8b9bb;
+}
+
+footer strong {
+    color: #ff394b;
+}
+
 </style>
 </head>
 
@@ -108,24 +135,91 @@ button {
 
 <header>
     <div class="container">
-        <p>🏴 مجلس ذکر و محبت اهل‌بیت (ع) 🏴</p>
+        <p class="small">🏴 مجلس ذکر و محبت اهل‌بیت (ع) 🏴</p>
 
-        <h1>هیئت نوجوانان<br>محبان الحسین (ع)</h1>
+        <h1>مسجد مسلم ابن عقیل</h1>
+
+        <p>پایگاه معنویت، دوستی و خدمت به اهل‌بیت (ع)</p>
 
         <p>السلام علیک یا اباعبدالله الحسین (ع)</p>
 
-        <a href="#program" class="button">مشاهده برنامه هیئت</a>
+        <a href="#heyat" class="button">هیئت محبان الحسین (ع)</a>
+        <a href="#program" class="button">برنامه مراسم</a>
     </div>
 </header>
 
+<nav>
+    <a href="#about">معرفی مسجد</a>
+    <a href="#heyat">هیئت</a>
+    <a href="#base">پایگاه بسیج</a>
+    <a href="#program">برنامه‌ها</a>
+    <a href="#notices">اطلاعیه‌ها</a>
+</nav>
+
 <main class="container">
 
-    <section class="card">
-        <div class="icon">🖤</div>
-        <h2>به هیئت ما خوش آمدید</h2>
+    <section class="card" id="about">
+        <div class="icon">🕌</div>
+        <h2>به مسجد مسلم ابن عقیل خوش آمدید</h2>
+
         <p>
-            محفلی صمیمی برای نوجوانان عاشق اهل‌بیت (ع)،
-            با یاد سیدالشهدا و ذکر نام امام حسین (ع).
+            اینجا محفلی برای عبادت، دوستی، همدلی و خدمت
+            به مردم و اهل‌بیت پیامبر (ص) است.
+        </p>
+
+        <p>
+            با یاد خداوند متعال و عشق به حضرت محمد (ص)
+            و خاندان پاک ایشان.
+        </p>
+    </section>
+
+    <section class="card" id="heyat">
+        <div class="icon">🏴</div>
+        <h2>هیئت محبان الحسین (ع)</h2>
+
+        <p>
+            محفلی صمیمی برای عزاداری، مداحی و زنده نگه داشتن
+            یاد و نام سیدالشهدا حضرت امام حسین (ع).
+        </p>
+
+        <div class="info">
+            📅 <strong>روز برگزاری:</strong>
+            سه‌شنبه شب‌ها
+        </div>
+
+        <div class="info">
+            🕰️ <strong>زمان:</strong>
+            بعد از نماز مغرب و عشا
+        </div>
+
+        <div class="info">
+            📍 <strong>مکان:</strong>
+            مسجد مسلم ابن عقیل، تربیت ۳
+        </div>
+
+        <div class="info">
+            🎙️ <strong>با نوای:</strong>
+            ذاکرین نوجوان اهل‌بیت (ع)
+        </div>
+
+        <div class="info">
+            📿 <strong>برنامه:</strong>
+            قرائت دعا، مداحی و ذکر اهل‌بیت (ع)
+        </div>
+    </section>
+
+    <section class="card" id="base">
+        <div class="icon">🌹</div>
+        <h2>پایگاه شهید هاشمی</h2>
+
+        <p>
+            پایگاهی برای رشد معنوی، فعالیت‌های فرهنگی،
+            همکاری گروهی و خدمت به مردم.
+        </p>
+
+        <p>
+            به یاد شهدا و با آرمان ادامه دادن راه
+            ایثار، فداکاری و خدمت.
         </p>
     </section>
 
@@ -133,10 +227,68 @@ button {
         <div class="icon">📿</div>
         <h2>برنامه مراسم</h2>
 
-        <p>🗓️ روز برگزاری: <span id="day">سه‌شنبه شب‌ها</span></p>
+        <div class="info">
+            <strong>🗓️ روز:</strong>
+            سه‌شنبه شب‌ها
+        </div>
 
-        <p>🕐 زمان: <span id="time">بعد از نماز مغرب و عشا</span></p>
+        <div class="info">
+            <strong>🕰️ ساعت:</strong>
+            بعد از نماز مغرب و عشا
+        </div>
 
-        <p>🎙️ اجرا: ذاکرین نوجوان اهل‌بیت (ع)</p>
+        <div class="info">
+            <strong>📍 محل:</strong>
+            مسجد مسلم ابن عقیل، تربیت ۳
+        </div>
 
-        <p>📖 برنامه: قرائت دعا و ذکر مص
+        <p>
+            برای اطلاع از تغییرات برنامه، اطلاعیه‌های سایت
+            را بررسی کنید.
+        </p>
+    </section>
+
+    <section class="card" id="notices">
+        <div class="icon">📢</div>
+        <h2>اطلاعیه‌ها</h2>
+
+        <div class="notice">
+            🏴 مراسم هیئت محبان الحسین (ع)،
+            سه‌شنبه شب‌ها بعد از نماز مغرب و عشا برگزار می‌شود.
+        </div>
+
+        <div class="notice">
+            🕌 برای اطلاع از برنامه‌های جدید مسجد،
+            اطلاعیه‌های همین بخش را دنبال کنید.
+        </div>
+
+        <p class="small">
+            برای انتشار اطلاعیه جدید، متن این بخش را
+            در فایل سایت ویرایش کنید.
+        </p>
+    </section>
+
+    <section class="card">
+        <div class="icon">❤️</div>
+        <h2>یا حسین (ع)</h2>
+
+        <p>
+            «هرگز نمیرد آن‌که دلش زنده شد به عشق»
+        </p>
+
+        <p>
+            خدایا ما را از خادمان واقعی اهل‌بیت (ع) قرار بده.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>🏴 مسجد مسلم ابن عقیل 🏴</p>
+    <p>با عشق به اهل‌بیت (ع)</p>
+    <p>طراح و نویسنده: <strong>علی حیدری</strong></p>
+    <p>تمامی حقوق این سایت محفوظ است.</p>
+</footer>
+
+</body>
+</html>
